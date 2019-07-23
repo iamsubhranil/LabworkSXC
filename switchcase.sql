@@ -1,0 +1,22 @@
+CLEAR SCREEN;
+
+BEGIN
+	FOR no IN 1..5
+	LOOP
+		DBMS_OUTPUT.PUT_LINE('no is : ' || no);
+		CASE no
+			WHEN 1 THEN
+				DBMS_OUTPUT.PUT_LINE('val 1');
+			WHEN 2 THEN
+				DBMS_OUTPUT.PUT_LINE('val 2');
+			WHEN 3 THEN
+				DBMS_OUTPUT.PUT_LINE('val 3');
+			WHEN 4 THEN
+				DBMS_OUTPUT.PUT_LINE('val 4');
+		ELSE
+			DBMS_OUTPUT.PUT_LINE('value 5');
+		END CASE;			
+	END LOOP;
+	DBMS_OUTPUT.PUT_LINE('Khela Sesh AF!');
+END;
+/
