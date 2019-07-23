@@ -1,0 +1,14 @@
+BEGIN
+	FOR no IN REVERSE 1..5
+	LOOP
+		DBMS_OUTPUT.PUT_LINE('no is : ' || no);
+	END LOOP;
+END;
+/
+BEGIN
+	FOR no IN 1..5
+	LOOP
+		DBMS_OUTPUT.PUT_LINE('no is : ' || no);
+	END LOOP;
+END;
+/
