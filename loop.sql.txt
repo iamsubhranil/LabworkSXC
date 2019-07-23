@@ -1,0 +1,11 @@
+DECLARE
+	lower NUMBER := &low;
+	upper NUMBER := &up;
+BEGIN
+	WHILE upper > lower LOOP
+		DBMS_OUTPUT.PUT_LINE('Lower : ' || lower);
+		lower := lower  + 1;
+	END LOOP;
+	DBMS_OUTPUT.PUT_LINE('Outside the loop');
+END;
+/
