@@ -1,0 +1,18 @@
+
+create table employee (
+	emp_id number(2),
+	salary number(10)
+);
+
+insert into employee values(&a, &b);
+
+select * from (
+	select * from (
+		select * from (
+			select *
+			from employee
+			order by salary desc
+		)
+		where rownum <= 5
+	) order by salary asc
+) where rownum <= 1;

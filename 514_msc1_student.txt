@@ -1,0 +1,32 @@
+create table student (
+	student_id number(5),
+	fn	varchar2(10),
+	ln	varchar2(10)
+);
+
+insert into student values (1, 'A', 'B');
+insert into student values (2, 'C', 'D');
+insert into student values (3, 'E', 'F');
+insert into student values (4, 'G', 'H');
+insert into student values (5, 'I', 'J');
+insert into student values (6, 'K', 'L');
+insert into student values (7, 'M', 'N');
+insert into student values (8, 'O', 'P');
+insert into student values (9, 'Q', 'R');
+insert into student values (10, 'S', 'T');
+insert into student values (123, 'Subhranil', 'Mukherjee');
+
+DECLARE
+	v_student_id NUMBER := &sv_student_id;
+	first_name varchar2(35);
+	last_name	varchar2(35);
+BEGIN
+	select fn, ln
+	into first_name, last_name
+	from student
+	where student_id = v_student_id;
+	DBMS_OUTPUT.PUT_LINE('Student Name : ' ||first_name|| ' ' ||last_name);
+EXCEPTION
+	when NO_DATA_FOUND
+	then DBMS_OUTPUT.PUT_LINE('There is no student with ID 123');
+END;
